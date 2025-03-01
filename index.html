@@ -1,0 +1,86 @@
+<!--
+CSCI 1170: Intro to Web Design and Development
+Assignment 2
+Student name: Andrew Dutka
+B00/B01 Number: B01008142
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
+
+    <!-- 
+    Creative Curiosity Styles: Includes a font and my css styles
+    -->
+    <link rel="stylesheet" href="creative-curiosity-corner/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="landing-page" class="active landing-page">
+        <div id="text-div" class="text-div">
+            <h1 class="landing-page-header">Flashcard Maker</h1>
+            <p class="landing-page-subheader">Make your very own flashcards, simple and easy. It only takes a couple clicks.</p>
+        </div>
+        <div id="button-div" class="button-div">
+            <button id="start-button" class="start-button"><i class="fa-solid fa-play"></i></button>
+        </div>
+    </div>
+
+    <div id="flashcard-main-page" class="hidden flashcard-main-page">
+        <div id="flashcard-form-and-created-cards" class="flashcard-form-and-created-cards">
+            <header class="main-page-header">
+                <h1>Flashcard Creation</h1>
+            </header>
+            <form id="form-id">
+                <div class="form">
+                    <input id="question" type="text" placeholder="Question" required>
+                </div>
+                <div class="form">
+                    <input id="answer" type="text" placeholder="Answer" required>
+                </div>
+                <div class="form-button">
+                    <button id="button" type="submit">Add to deck</button>
+                </div>
+            </form>
+            <div id="card-container">
+                <section id="all-cards">
+                    <h2>All Flashcards Created:</h2>
+                </section>
+                <!-- <section id="displayed-card">
+                    <h2>Displayed Card:</h2>
+                    <p id="card">No Card is Selected.</p>
+                    <button id="randomize">Shuffle</button>
+                    <button id="learned">Mark as Learned</button>
+                </section> -->
+            </div>
+        </div>
+        <div id="flashcard-display-container">
+            <h2>Displayed Card</h2>
+            <div id="flashcard" class="flashcard">
+                <section id="displayed-card">
+                    <p id="card">No Card is Selected.</p>
+                </section>
+            </div>
+            <div class="button-flex">
+                <div class="display-buttons"><button id="randomize">Shuffle</button></div>
+                <div class="display-buttons"><button id="learned">Mark as Learned</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/flashcards.js"></script>
+
+    <!-- 
+    Creative Curiosity Corner Scripts: Includes my js script and FontAwesome icon script 
+    -->
+    <script src="creative-curiosity-corner/landing-page.js"></script>
+    <script src="https://kit.fontawesome.com/990770d633.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

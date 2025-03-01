@@ -1,0 +1,235 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(58, 58, 58);
+    color: rgb(255, 255, 255);
+    font-family: "Roboto";
+    overflow: hidden;
+}
+
+.landing-page {
+    text-align: center;
+    margin-top: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    width: 700px;
+    justify-content: center;
+}
+
+.text-div {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-radius: 30px;
+    width: 100%;
+    border: 1px solid rgb(104, 104, 104);
+    background-color: rgb(35, 35, 35);
+}
+
+.button-div {
+    margin-top: 20px;
+    width: 10%;
+    height: 70px;
+    color: rgb(35, 35, 35);
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px;
+    font-size: 30px;
+}
+
+.button-div:hover {
+    background-color: rgb(214, 214, 214);
+    transform: scale(103%);
+}
+
+.landing-page-header {
+    font-size: 40px;
+    margin: 10px;
+}
+
+.landing-page-subheader {
+    color: rgb(217, 217, 217);
+}
+
+.start-button {
+    all: unset;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+}
+
+.active {
+    pointer-events: auto;
+}
+
+.hidden { 
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.flashcard-main-page {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+.flashcard-main-page.active {
+    /* transitions and effects */
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
+    transform: translateX(0px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 95%;
+    margin-top: 25px;
+    /* other css stuff */
+}
+
+.flashcard-form-and-created-cards {
+    flex-direction: column;
+    display: flex;
+    width: 40%;
+    height: 600px;
+    padding: 25px;
+    border-radius: 30px;
+    border: 1px solid rgb(104, 104, 104);
+    background-color: rgb(35, 35, 35);
+}
+
+#flashcard-display-container {
+    flex-direction: column;
+    display: flex;
+    width: 45%;
+    padding: 25px;
+    border-radius: 30px;
+    border: 1px solid rgb(104, 104, 104);
+    background-color: rgb(35, 35, 35);
+    align-items: center;
+    font-size: 1.5em;
+    perspective: 1000px;
+}
+
+.transition-class {
+    transform: translateX(-200px);
+    opacity: 0; 
+    transition: transform 1.2s ease-in-out, opacity 0.9s ease-in-out;
+}
+
+.main-page-header {
+    align-self: center;
+    font-size: 1.2em;
+}
+
+#form-id {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 75%;
+    height: 130px;
+    flex-direction: column;
+}
+
+input {
+    all: unset;
+    width: 100%;
+}
+
+.form, .form-button {
+    width: 90%;
+    padding: 6px;
+    border: 1px solid rgb(104, 104, 104);
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+.form-button {
+    padding: 6px;
+}
+
+#button {
+    all: unset;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.form-button:hover  {
+    background-color: rgb(68, 68, 68);
+}
+
+#card-container {
+    align-self: center;
+}
+
+.flashcard {
+    margin: 30px;
+    width: 90%;
+    height: 80%;
+    background-color: rgb(104, 104, 104);
+    border-radius: 30px;
+    border: 1px solid rgb(168, 168, 168);
+    transition: all 1s linear;
+}
+
+#flashcard-display-container button{
+    all: unset;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+#flashcard-display-container h2{
+    margin: 10px;;
+}
+
+#card {
+    text-align: center;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.display-buttons {
+    border: 1px solid rgb(104, 104, 104);
+    border-radius: 7px;
+    width: 45%;
+    height: 100%;
+    font-size: medium;
+    color: white;
+}
+
+.display-buttons:hover {
+    background-color: rgb(68, 68, 68);
+}
+
+.button-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 400px;
+}
+
+#displayed-card {
+    margin: 15px;
+}
+
+.flashcard:hover {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: transform 1s linear;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: all 1s linear;
+}
+
+#card-container p {
+    background-color: rgb(104, 104, 104);
+    border: 1px solid rgb(168, 168, 168);
+    border-radius: 8px;
+    text-align: center;
+}
